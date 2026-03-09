@@ -1,0 +1,39 @@
+# LLM Provider Configuration
+# Using Groq for fast inference
+
+# Default provider to use
+default_provider: "groq"
+
+providers:
+  groq:
+    enabled: true
+    model: "llama-3.3-70b-versatile"
+    temperature: 0.3
+    max_tokens: 2048
+    # API key set via GROQ_API_KEY environment variable
+    
+  openai:
+    enabled: false
+    model: "gpt-4o"
+    temperature: 0.7
+    max_tokens: 1024
+    
+  anthropic:
+    enabled: false
+    model: "claude-3-5-sonnet-20241022"
+    temperature: 0.7
+    max_tokens: 1024
+
+# Embedding model configuration (for RAG)
+embeddings:
+  provider: "sentence-transformers"
+  model: "all-MiniLM-L6-v2"
+
+# Vector store configuration
+vector_store:
+  collection_name: "icx8200_installation_guide"
+  persist_directory: "./chroma_db"
+  
+  # Search settings - retrieve more context for technical docs
+  top_k: 5
+  similarity_threshold: 0.5

@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.DS_Store
+
+# Env and secrets
+*.env
+*.env.*
+backend/.env
+streamlit_app/.streamlit/
+
+# SQLite and data
+data/
+*.db
+
+# Python
+__pycache__/
+.venv/
+venv/
+

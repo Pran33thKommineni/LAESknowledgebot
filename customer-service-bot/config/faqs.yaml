@@ -1,0 +1,119 @@
+# FAQ Knowledge Base
+# Ruckus ICX 8200 Installation Guide FAQs
+
+faqs:
+  - question: "What are the ICX 8200 series models?"
+    answer: |
+      The Ruckus ICX 8200 series includes several models:
+      - ICX 8200-C08PF: Compact 8-port model with PoE+
+      - ICX 8200-24F: 24-port fiber model
+      - ICX 8200-24P: 24-port with PoE++
+      - ICX 8200-48F: 48-port fiber model
+      - ICX 8200-48P: 48-port with PoE++
+      - ICX 8200-48PF: 48-port with PoE++ and additional features
+      Each model is designed for different deployment scenarios from edge to aggregation.
+    keywords:
+      - models
+      - series
+      - variants
+      - types
+      - "8200"
+
+  - question: "What are the power requirements for ICX 8200?"
+    answer: |
+      The ICX 8200 switches support various power configurations:
+      - AC power input: 100-240V AC, 50/60 Hz
+      - DC power input available on select models
+      - Hot-swappable power supplies for redundancy
+      - PoE budget varies by model (up to 1440W on 48P models)
+      Always ensure proper grounding and use approved power cables.
+    keywords:
+      - power
+      - voltage
+      - watts
+      - poe
+      - electrical
+      - ac
+      - dc
+
+  - question: "How do I rack mount the ICX 8200?"
+    answer: |
+      To rack mount the ICX 8200:
+      1. Use the included rack mount brackets
+      2. Attach brackets to the sides of the switch using provided screws
+      3. Mount in a standard 19-inch rack
+      4. Ensure proper ventilation - leave 1U space above and below if possible
+      5. Route cables to avoid blocking airflow
+      The switch requires 1U of rack space. Front-to-back airflow design.
+    keywords:
+      - rack
+      - mount
+      - mounting
+      - install
+      - bracket
+      - 19 inch
+
+  - question: "What is the default IP address for ICX 8200?"
+    answer: |
+      The ICX 8200 does not have a default IP address configured out of the box.
+      To configure initial IP:
+      1. Connect via console cable (RJ-45 to USB or serial)
+      2. Use terminal settings: 9600 baud, 8N1, no flow control
+      3. Configure IP using: interface management 1, ip address <ip> <mask>
+      Or use DHCP if available on your management network.
+    keywords:
+      - ip address
+      - default
+      - initial
+      - management
+      - dhcp
+      - console
+
+  - question: "How do I connect to the console port?"
+    answer: |
+      To connect to the ICX 8200 console:
+      1. Locate the console port (RJ-45 or USB-C depending on model)
+      2. Use a console cable (RJ-45 to DB9 or USB)
+      3. Open terminal emulator (PuTTY, SecureCRT, etc.)
+      4. Settings: 9600 baud, 8 data bits, no parity, 1 stop bit, no flow control
+      5. Press Enter to get the login prompt
+      Default credentials may vary - check your documentation.
+    keywords:
+      - console
+      - serial
+      - terminal
+      - putty
+      - connection
+      - baud
+
+  - question: "What cables do I need for stacking?"
+    answer: |
+      For ICX 8200 stacking:
+      - Use QSFP28 or QSFP+ cables for stacking ports
+      - Supported cable types: DAC (Direct Attach Copper) or fiber optics
+      - Maximum stack size: 12 units
+      - Stacking bandwidth: Up to 400 Gbps
+      Ensure all switches in the stack run the same firmware version.
+    keywords:
+      - stack
+      - stacking
+      - cable
+      - qsfp
+      - dac
+      - fiber
+
+  - question: "What is the operating temperature range?"
+    answer: |
+      ICX 8200 environmental specifications:
+      - Operating temperature: 0°C to 45°C (32°F to 113°F)
+      - Storage temperature: -40°C to 70°C (-40°F to 158°F)
+      - Operating humidity: 10% to 90% non-condensing
+      - Altitude: Up to 3,000m (10,000 ft)
+      Ensure adequate cooling in your installation environment.
+    keywords:
+      - temperature
+      - heat
+      - cooling
+      - environment
+      - humidity
+      - specs
